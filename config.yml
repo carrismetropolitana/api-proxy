@@ -13,6 +13,10 @@ global:
   checkNewVersion: true
   sendAnonymousUsage: true
 
+metrics:
+  otlp: {}
+
+
 ################################################################
 # EntryPoints configuration
 ################################################################
@@ -30,7 +34,7 @@ entryPoints:
 
 providers:
   http:
-    endpoint: "http://127.0.0.1:9000/api"
+    endpoint: "https://raw.githubusercontent.com/carrismetropolitana/api-traefik/refs/heads/production/services.yml"
     pollInterval: "5s"
 
 ################################################################
