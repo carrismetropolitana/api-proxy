@@ -30,7 +30,8 @@ entryPoints:
 
 providers:
   http:
-    endpoint: "http:/z/127.0.0.1:9000/api"
+    endpoint: "http://127.0.0.1:9000/api"
+    pollInterval: "5s"
 
 ################################################################
 # Traefik logs configuration
