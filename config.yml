@@ -29,9 +29,6 @@ entryPoints:
   web:
     address: :7050
 
-  websecure:
-    address: :443
-
 providers:
   http:
     endpoint: "https://raw.githubusercontent.com/carrismetropolitana/api-traefik/refs/heads/production/services.yml"
