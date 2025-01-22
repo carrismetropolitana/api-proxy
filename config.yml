@@ -27,7 +27,7 @@ metrics:
 #
 entryPoints:
   web:
-    address: :1234
+    address: :7050
 
   websecure:
     address: :443

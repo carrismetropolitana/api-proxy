@@ -2,7 +2,7 @@ services:
   traefik:
     image: traefik:v3.3
     ports:
-      - "80:80"
+      - "7050:7050"
       - "8080:8080"
     volumes:
       - ./config.yml:/etc/traefik/traefik.yml
