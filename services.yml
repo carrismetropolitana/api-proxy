@@ -1,14 +1,13 @@
-# http routing section
 http:
   routers:
-    # Define a connection between requests and services
-    to-whoami:
-      rule: "Host(`api.example.com`) && PathPrefix(`/whoami/`)"
-      # If the rule matches, forward to the whoami service (declared below)
-      service: api
+    api-router:
+      rule: "Host(`localhost`)"
+      service: api-service
+      entryPoints:
+        - web
 
   services:
-    api:
+    api-service:
       loadBalancer:
         servers:
-        - url: https://api.cmet.pt
+          - url: "https://api.cmet.pt"
