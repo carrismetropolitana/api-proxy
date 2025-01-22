@@ -10,5 +10,5 @@ http:
     api-service:
       loadBalancer:
         servers:
-          - url: "https://api.cmet.pt"
+          - url: "http://141.147.49.238"
           - url: "https://api.cmetropolitana.pt"
