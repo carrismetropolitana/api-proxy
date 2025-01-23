@@ -13,8 +13,9 @@ global:
   checkNewVersion: true
   sendAnonymousUsage: true
 
-metrics:
-  otlp: {}
+log:
+  level: DEBUG
+accessLog: {}
 
 
 ################################################################
@@ -27,11 +28,13 @@ metrics:
 #
 entryPoints:
   web:
-    address: :7050
+    address: :80
+  websecure:
+    address: :443
 
 providers:
   http:
-    endpoint: "https://raw.githubusercontent.com/carrismetropolitana/api-traefik/refs/heads/production/services.yml"
+    endpoint: "https://storage.carrismetropolitana.pt/static/test/services.yml"
     pollInterval: "5s"
 
 ################################################################

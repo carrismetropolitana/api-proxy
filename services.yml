@@ -5,9 +5,17 @@ http:
       service: api-service
       entryPoints:
         - web
+        - websecure
 
   services:
     api-service:
       loadBalancer:
         servers:
-          - url: "http://141.147.49.238"
+          - url: "https://api.cmet.pt"
+        passHostHeader: true # Ensure the Host header is forwarded
+
+  middlewares:
+    cloudflare-headers:
+      headers:
+        customRequestHeaders:
+          Host: "api.cmet.pt" # Set the Host header to match Cloudflare's expectations
